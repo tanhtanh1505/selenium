@@ -1,5 +1,7 @@
 # Selenium
 
+This is sample project test using <a href="https://www.selenium.dev/">Selenium</a> in order to test page <b>TodoList</b> in <a href="https://github.com/docker/getting-started">docker/getting-started</a>
+
 ## Installation
 
 ```
