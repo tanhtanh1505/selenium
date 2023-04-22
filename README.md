@@ -22,4 +22,6 @@ npm run test
 
 ## Report
 
-### <a href="mochawesome-report/mochawesome.html"> TodoList </a>
+### TodoList
+
+<img href="reports/todo-list.jpg" alt="todo-list-report"/>
