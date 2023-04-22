@@ -1,0 +1,253 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-22T16:04:56.896Z",
+    "end": "2023-04-22T16:04:58.842Z",
+    "duration": 1946,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7346e8eb-fbdd-42ac-8841-bb2899574701",
+      "title": "",
+      "fullFile": "/home/tanh/code/selenium/nodejs/index.js",
+      "file": "/index.js",
+      "beforeHooks": [],
+      "afterHooks": [
+        {
+          "title": "\"after all\" hook in \"{root}\"",
+          "fullTitle": "\"after all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "if (seleniumServer) {\n  return seleniumServer.kill()\n}",
+          "err": {},
+          "uuid": "d805b321-ad17-4c25-a43b-b0eebe249aa9",
+          "parentUUID": "7346e8eb-fbdd-42ac-8841-bb2899574701",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e0bafb7c-2961-4970-8a9d-d3bc6020e2a1",
+          "title": "[chrome]",
+          "fullFile": "/home/tanh/code/selenium/nodejs/index.js",
+          "file": "/index.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+              "title": "TodoList Test",
+              "fullFile": "/home/tanh/code/selenium/nodejs/index.js",
+              "file": "/index.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook in \"TodoList Test\"",
+                  "fullTitle": "[chrome] TodoList Test \"before all\" hook in \"TodoList Test\"",
+                  "timedOut": false,
+                  "duration": 553,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "driver = await new Builder().forBrowser(\"chrome\").setChromeService(new chrome.ServiceBuilder(\"/usr/bin/chromedriver\")).build();",
+                  "err": {},
+                  "uuid": "0e157815-f7ed-465e-a236-714910127e04",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": true,
+                  "skipped": false
+                },
+                {
+                  "title": "\"before each\" hook in \"TodoList Test\"",
+                  "fullTitle": "[chrome] TodoList Test \"before each\" hook in \"TodoList Test\"",
+                  "timedOut": false,
+                  "duration": 126,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "await driver.get(url);\nlet title = await driver.getTitle();\nassert.equal(\"Todo App\", title);\nawait driver.manage().setTimeouts({ implicit: 500 });",
+                  "err": {},
+                  "uuid": "8143fb2d-b6e6-4555-89a2-fa20ff5388ed",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [
+                {
+                  "title": "\"after all\" hook in \"TodoList Test\"",
+                  "fullTitle": "[chrome] TodoList Test \"after all\" hook in \"TodoList Test\"",
+                  "timedOut": false,
+                  "duration": 59,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "await driver.quit()",
+                  "err": {},
+                  "uuid": "a1155bca-5680-4596-be64-adc79ac8575a",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "tests": [
+                {
+                  "title": "add a todo item",
+                  "fullTitle": "[chrome] TodoList Test add a todo item",
+                  "timedOut": false,
+                  "duration": 189,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let textBox = await driver.findElement(By.className(\"form-control\"));\nlet submitButton = await driver.findElement(By.className(\"btn btn-success\"));\nawait textBox.sendKeys(testCase.addItem.input);\nawait submitButton.click();\nlet listTodo = await driver.findElements(By.className(\"item false container-fluid\"));\nlet item = listTodo.find(async (item) => (await item.getText()) === testCase.addItem.input);\nlet output = await item.getText();\nassert.equal(testCase.addItem.expected, output);",
+                  "err": {},
+                  "uuid": "31265273-cd83-4a61-87e3-1d4b208253b0",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "mark a todo item as done",
+                  "fullTitle": "[chrome] TodoList Test mark a todo item as done",
+                  "timedOut": false,
+                  "duration": 174,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let listTodo = await driver.findElements(By.className(\"item false container-fluid\"));\nlet item = listTodo.find(async (item) => (await item.getText()) === testCase.markItem.input);\nlet checkBox = await item.findElement(By.className(\"text-center col-1\"));\nawait checkBox.click();\nlistTodo = await driver.wait(async () => {\n  listTodo = await driver.findElements(By.className(\"item completed container-fluid\"));\n  return listTodo;\n}, 5000);\nitem = listTodo.find(async (item) => (await item.getText()) === testCase.markItem.input);\nlet output = await item.getText();\nassert.equal(testCase.markItem.expected, output);",
+                  "err": {},
+                  "uuid": "9e2111b8-6149-4a88-adcb-f6b08f1656b6",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "unmark a todo item",
+                  "fullTitle": "[chrome] TodoList Test unmark a todo item",
+                  "timedOut": false,
+                  "duration": 144,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let listTodo = await driver.findElements(By.className(\"item completed container-fluid\"));\nlet item = listTodo.find(async (item) => (await item.getText()) === testCase.unmarkItem.input);\nlet checkBox = await item.findElement(By.className(\"text-center col-1\"));\nawait checkBox.click();\nlistTodo = await driver.wait(async () => {\n  listTodo = await driver.findElements(By.className(\"item false container-fluid\"));\n  return listTodo;\n}, 5000);\nitem = listTodo.find(async (item) => (await item.getText()) === testCase.unmarkItem.input);\nlet output = await item.getText();\nassert.equal(testCase.unmarkItem.expected, output);",
+                  "err": {},
+                  "uuid": "45d47562-91aa-4fa5-9a3c-df75fa420b2c",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "delete a todo item",
+                  "fullTitle": "[chrome] TodoList Test delete a todo item",
+                  "timedOut": false,
+                  "duration": 70,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let listTodo = await driver.findElements(By.className(\"item false container-fluid\"));\nlet item = listTodo.find(async (item) => (await item.getText()) === testCase.deleteItem.input);\nlet deleteButton = await item.findElement(By.className(\"text-center remove col-1\"));\nawait deleteButton.click();\nlistTodo = await driver.wait(async () => {\n  listTodo = await driver.findElements(By.className(\"item false container-fluid\"));\n  return listTodo;\n}, 5000);\nitem = listTodo.find(async (item) => (await item.getText()) === testCase.deleteItem.input);\nassert.notEqual(testCase.deleteItem.expected, item);",
+                  "err": {},
+                  "uuid": "55d75e64-4b02-4d90-b982-2c4035c87901",
+                  "parentUUID": "72420ccf-5719-4a74-bf64-4e30ffa30768",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "31265273-cd83-4a61-87e3-1d4b208253b0",
+                "9e2111b8-6149-4a88-adcb-f6b08f1656b6",
+                "45d47562-91aa-4fa5-9a3c-df75fa420b2c",
+                "55d75e64-4b02-4d90-b982-2c4035c87901"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 577,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 10000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "false"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
