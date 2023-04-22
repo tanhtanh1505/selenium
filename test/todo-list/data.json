@@ -1,0 +1,21 @@
+{
+  "url": "http://localhost:3000",
+  "testCase": {
+    "addItem": {
+      "input": "hehe",
+      "expected": "hehe"
+    },
+    "markItem": {
+      "input": "hehe",
+      "expected": "hehe"
+    },
+    "unmarkItem": {
+      "input": "hehe",
+      "expected": "hehe"
+    },
+    "deleteItem": {
+      "input": "hehe",
+      "expected": null
+    }
+  }
+}

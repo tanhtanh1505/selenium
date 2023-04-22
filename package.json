@@ -1,0 +1,20 @@
+{
+  "name": "selenium-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:open": "mocha index.js --timeout 10000 --reporter mochawesome --reporter-options autoOpen=true",
+    "test": "mocha index.js --timeout 10000 --reporter mochawesome --reporter-options autoOpen=false"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "selenium-webdriver": "^4.8.2"
+  }
+}
