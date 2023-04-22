@@ -24,4 +24,4 @@ npm run test
 
 ### TodoList
 
-<img href="reports/todo-list.jpg" alt="todo-list-report"/>
+<img src="reports/todo-list.jpg" alt="todo-list-report"/>
