@@ -8,17 +8,11 @@ npm i
 
 ## Run
 
-- Open report
-
 ```
 npm run test:open
 ```
 
-- Close report
-
-```
-npm run test
-```
+Or without opening report `npm run test`
 
 ## Report
 
