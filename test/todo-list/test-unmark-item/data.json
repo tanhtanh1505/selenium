@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3000",
+  "unmarkItem": {
+    "description": "Unmark an item as completed",
+    "precondition": "markItem",
+    "testCases": [
+      {
+        "description": "Unmark normal item as completed",
+        "input": "Buy groceries",
+        "expected": "Buy groceries"
+      },
+      {
+        "description": "Unmark special item as completed",
+        "input": "Buy !@#$%^&*()_+ groceries",
+        "expected": "Buy !@#$%^&*()_+ groceries"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "url": "http://localhost:3000",
+  "addItem": {
+    "description": "Add an item to the list",
+    "testCases": [
+      {
+        "description": "Add normal item to the list",
+        "input": "Buy groceries",
+        "expected": "Buy groceries"
+      },
+      {
+        "description": "Add special characters to the list",
+        "input": "Buy !@#$%^&*()_+ groceries",
+        "expected": "Buy !@#$%^&*()_+ groceries"
+      },
+      {
+        "description": "Add empty string to the list",
+        "input": "",
+        "expected": null
+      }
+    ]
+  }
+}

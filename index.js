@@ -1,4 +1,3 @@
-const { todoListTestAddItem, todoListTestRemoveItem } = require("./test/todo-list/index.js");
+const { todoListTest } = require("./test/todo-list/index.js");
 
-todoListTestAddItem();
-todoListTestRemoveItem();
+todoListTest();

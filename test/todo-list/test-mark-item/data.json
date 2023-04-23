@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3000",
+  "markItem": {
+    "description": "Mark an item as completed",
+    "precondition": "addItem",
+    "testCases": [
+      {
+        "description": "Mark normal item as completed",
+        "input": "Buy groceries",
+        "expected": "Buy groceries"
+      },
+      {
+        "description": "Mark special item as completed",
+        "input": "Buy !@#$%^&*()_+ groceries",
+        "expected": "Buy !@#$%^&*()_+ groceries"
+      }
+    ]
+  }
+}

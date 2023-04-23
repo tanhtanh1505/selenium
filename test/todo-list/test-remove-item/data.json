@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3000",
+  "removeItem": {
+    "description": "Remove an item from the list",
+    "precondition": "addItem",
+    "testCases": [
+      {
+        "description": "Remove normal item from the list",
+        "input": "Buy groceries",
+        "expected": null
+      },
+      {
+        "description": "Remove special item from the list",
+        "input": "Buy !@#$%^&*()_+ groceries",
+        "expected": null
+      }
+    ]
+  }
+}
