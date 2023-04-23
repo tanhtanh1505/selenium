@@ -14,7 +14,6 @@ module.exports.todoListTestMarkItem = () => {
         before(async function () {
           driver = await new Builder().forBrowser("chrome").setChromeService(new chrome.ServiceBuilder("/usr/bin/chromedriver")).build();
           await driver.get(url);
-          await driver.manage().setTimeouts({ implicit: 1000 });
         });
 
         after(async () => {

@@ -14,7 +14,6 @@ module.exports.todoListTestAddItem = () => {
         before(async function () {
           driver = await new Builder().forBrowser("chrome").setChromeService(new chrome.ServiceBuilder("/usr/bin/chromedriver")).build();
           await driver.get(url);
-          await driver.manage().setTimeouts({ implicit: 1000 });
         });
 
         after(async () => {
@@ -24,19 +23,21 @@ module.exports.todoListTestAddItem = () => {
 
         for (let i = 0; i < addItem.testCases.length; i++) {
           it(addItem.testCases[i].description, async function () {
+            // load test data
             const input = addItem.testCases[i].input;
             const expected = addItem.testCases[i].expected;
 
             driver.manage().setTimeouts({ implicit: 1000 });
 
+            // enter input
             let textBox = await driver.findElement(By.className("form-control"));
             let submitButton = await driver.findElement(By.className("btn btn-success"));
 
             await textBox.sendKeys(input);
             await submitButton.click();
 
+            // check item is added
             let output;
-
             try {
               let newItem = await driver.findElement(By.xpath(`//*[text()="${input}"]`));
               output = await newItem.getText();
