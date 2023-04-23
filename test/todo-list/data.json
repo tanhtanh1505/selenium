@@ -1,21 +1,40 @@
 {
   "url": "http://localhost:3000",
-  "testCase": {
-    "addItem": {
-      "input": "hehe",
-      "expected": "hehe"
-    },
-    "markItem": {
-      "input": "hehe",
-      "expected": "hehe"
-    },
-    "unmarkItem": {
-      "input": "hehe",
-      "expected": "hehe"
-    },
-    "deleteItem": {
-      "input": "hehe",
-      "expected": null
-    }
+  "title": "Todo App",
+  "addItem": {
+    "description": "Add an item to the list",
+    "testCases": [
+      {
+        "description": "Add normal item to the list",
+        "input": "Buy groceries",
+        "expected": "Buy groceries"
+      },
+      {
+        "description": "Add special characters to the list",
+        "input": "-=^",
+        "expected": "-=^"
+      },
+      {
+        "description": "Add empty string to the list",
+        "input": "",
+        "expected": null
+      }
+    ]
+  },
+  "removeItem": {
+    "description": "Remove an item from the list",
+    "precondition": "addItem",
+    "testCases": [
+      {
+        "description": "Remove normal item from the list",
+        "input": "Buy groceries",
+        "expected": null
+      },
+      {
+        "description": "Remove special characters from the list",
+        "input": "-=^",
+        "expected": null
+      }
+    ]
   }
 }
