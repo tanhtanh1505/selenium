@@ -19,5 +19,26 @@ Or without opening report `npm run test`
 ## Report
 
 ### TodoList
+Expand to see more details
 
-<img src="reports/todo-list.jpg" alt="todo-list-report" width=100%/>
+<details>
+  <summary>Add TodoItem</summary>
+  <img src="reports/add.jpg" alt="todo-list-report" width=100%/>
+</details>
+
+
+<details>
+  <summary>Mark TodoItem</summary>
+  <img src="reports/mark.jpg" alt="todo-list-report" width=100%/>
+</details>
+
+
+<details>
+  <summary>Unmark TodoItem</summary>
+  <img src="reports/unmark.jpg" alt="todo-list-report" width=100%/>
+</details>
+
+<details>
+  <summary>Remove TodoItem</summary>
+  <img src="reports/remove.jpg" alt="todo-list-report" width=100%/>
+</details>
