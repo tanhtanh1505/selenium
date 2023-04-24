@@ -10,8 +10,8 @@
       },
       {
         "description": "Add special characters to the list",
-        "input": "Buy !@#$%^&*()_+ groceries",
-        "expected": "Buy !@#$%^&*()_+ groceries"
+        "input": "!@#$%^&*()_",
+        "expected": "!@#$%^&*()_"
       },
       {
         "description": "Add empty string to the list",

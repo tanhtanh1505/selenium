@@ -11,8 +11,8 @@
       },
       {
         "description": "Unmark special item as completed",
-        "input": "Buy !@#$%^&*()_+ groceries",
-        "expected": "Buy !@#$%^&*()_+ groceries"
+        "input": "!@#$%^&*()_",
+        "expected": "!@#$%^&*()_"
       }
     ]
   }

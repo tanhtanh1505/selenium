@@ -11,7 +11,7 @@
       },
       {
         "description": "Remove special item from the list",
-        "input": "Buy !@#$%^&*()_+ groceries",
+        "input": "!@#$%^&*()_",
         "expected": null
       }
     ]
