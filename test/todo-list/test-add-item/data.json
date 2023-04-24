@@ -14,6 +14,16 @@
         "expected": "!@#$%^&*()_"
       },
       {
+        "description": "Add sentence with numbers to the list",
+        "input": "123123123",
+        "expected": "123123123"
+      },
+      {
+        "description": "Add full space characters to the list",
+        "input": "   ",
+        "expected": null
+      },
+      {
         "description": "Add empty string to the list",
         "input": "",
         "expected": null
